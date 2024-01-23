@@ -1,0 +1,64 @@
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 395px;
+
+#root {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  flex-direction: row;
+  position: relative;
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .special {
+    position: absolute;
+    right: 48%;
+    font-size: 50px;
+
+    @media (max-width: $breakpoint-mobile) {
+      right: 50%;
+      top: 42%;
+    }
+  }
+
+  .cat-wrapper,
+  .dog-wrapper {
+    height: 100%;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 100vw;
+    }
+
+    .textContainer {
+      width: 600px;
+      height: auto;
+      padding: 20px;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      background-color: white;
+      @media (max-width: $breakpoint-mobile) {
+        width: 300px;
+      }
+      h2 {
+        font-size: 33px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+  .dog-wrapper {
+    background-color: lightblue;
+  }
+}
